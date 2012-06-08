@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.7.0" method="upgrade">
+	<name>Golem Social Box Module</name>
+	<author>Emmanuel Fontan</author>
+	<authorEmail>fontanemmanuel@gmail.com</authorEmail>
+	<authorUrl>www.elgolem.com.ar</authorUrl>
+	<creationDate>07/06/2012</creationDate>
+	<copyright>2012 Emmanuel Fontan</copyright>
+	<license>GNU General Public License v3.0 - http://www.gnu.org/licenses/</license>
+	<version>1.2.1</version>
+	
+	<description>
+		This module will display a social box that integrates different social networks to your site.		
+	</description>
+
+	<files>
+		<filename module="mod_golemsocialbox">mod_golemsocialbox.php</filename>
+		<filename>helper.php</filename>
+		<filename>LICENSE.php</filename>
+        <filename>index.html</filename>
+		<folder>images</folder>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+		<folder>language</folder>
+	</files>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			
+				<field name="load_css" 
+					type="list" 
+					default="yes" 
+					label="MOD_GOLEMSOCIALBOX_LOAD_CSS" 
+					description="MOD_GOLEMSOCIALBOX_LOAD_CSS_DESC" >
+						<option value="yes">MOD_GOLEMSOCIALBOX_YES</option>
+						<option value="no">MOD_GOLEMSOCIALBOX_NO</option>
+				</field>
+			
+				<field name="width" 
+					type="text" 
+					default="240" 
+					label="MOD_GOLEMSOCIALBOX_WIDTH" 
+					description="MOD_GOLEMSOCIALBOX_WIDTH_DESC" />
+										
+			
+				<field name="spacer0" type="spacer" hr="true" />
+				
+				
+				<field name="fblike_enable" 
+					type="list" 
+					default="yes" 
+					label="MOD_GOLEMSOCIALBOX_FBLIKE_ENABLE" 
+					description="MOD_GOLEMSOCIALBOX_FBLIKE_ENABLE_DESC" >
+						<option value="yes">MOD_GOLEMSOCIALBOX_ENABLE</option>
+						<option value="no">MOD_GOLEMSOCIALBOX_DISABLE</option>
+				</field>
+				
+				<field name="fblike_url" 
+					type="text" 
+					default="http://www.facebook.com/joomla" 
+					label="MOD_GOLEMSOCIALBOX_FBLIKE_URL" 
+					description="MOD_GOLEMSOCIALBOX_FBLIKE_URL_DESC" />
+				
+				<field name="fblike_height" 
+					type="text" 
+					default="60" 
+					label="MOD_GOLEMSOCIALBOX_FBLIKE_HEIGHT" 
+					description="MOD_GOLEMSOCIALBOX_FBLIKE_HEIGHT_DESC" />
+					
+				<field name="fblike_show_faces" 
+					type="list" 
+					default="false" 
+					label="MOD_GOLEMSOCIALBOX_FBLIKE_SHOWFACES" 
+					description="MOD_GOLEMSOCIALBOX_FBLIKE_SHOWFACES_DESC" >
+						<option value="true">MOD_GOLEMSOCIALBOX_ENABLE</option>
+						<option value="false">MOD_GOLEMSOCIALBOX_DISABLE</option>
+				</field>
+
+				
+				<field name="spacer1" type="spacer" hr="true" />
+				
+				
+				<field name="tw_follow_button_enable" 
+					type="list" 
+					default="yes" 
+					label="MOD_GOLEMSOCIALBOX_TWITTER_FOLLOW_ENABLE" 
+					description="MOD_GOLEMSOCIALBOX_TWITTER_FOLLOW_ENABLE_DESC" >
+						<option value="yes">MOD_GOLEMSOCIALBOX_ENABLE</option>
+						<option value="no">MOD_GOLEMSOCIALBOX_DISABLE</option>
+				</field>
+				
+				<field name="tw_follow_button_user" 
+					type="text" 
+					default="twitteruser" 
+					label="MOD_GOLEMSOCIALBOX_TWITTER_FOLLOW_USER" 
+					description="MOD_GOLEMSOCIALBOX_TWITTER_FOLLOW_USER_DESC" />
+
+				<field name="tw_follow_button_show_user" 
+					type="list" 
+					default="yes" 
+					label="MOD_GOLEMSOCIALBOX_TWITTER_FOLLOW_SHOW_USER" 
+					description="MOD_GOLEMSOCIALBOX_TWITTER_FOLLOW_SHOW_USER_DESC" >
+						<option value="yes">MOD_GOLEMSOCIALBOX_YES</option>
+						<option value="no">MOD_GOLEMSOCIALBOX_NO</option>
+				</field>
+
+				<field name="tw_follow_button_count" 
+					type="list" 
+					default="true" 
+					label="MOD_GOLEMSOCIALBOX_TWITTER_FOLLOW_SHOW_COUNT_DESC" 
+					description="MOD_GOLEMSOCIALBOX_TWITTER_FOLLOW_SHOW_COUNT_DESC" >
+						<option value="true">MOD_GOLEMSOCIALBOX_ENABLE</option>
+						<option value="false">MOD_GOLEMSOCIALBOX_DISABLE</option>
+				</field>
+
+				
+				<field name="spacer2" type="spacer" hr="true" />
+				
+								
+				<field name="pin_follow_button_enable" 
+					type="list" 
+					default="yes" 
+					label="MOD_GOLEMSOCIALBOX_PIN_FOLLOW_BUTTON_ENABLE" 
+					description="MOD_GOLEMSOCIALBOX_PIN_FOLLOW_BUTTON_ENABLE_DESC" >
+						<option value="yes">MOD_GOLEMSOCIALBOX_ENABLE</option>
+						<option value="no">MOD_GOLEMSOCIALBOX_DISABLE</option>
+				</field>
+				
+				<field name="pin_follow_button_text" 
+					type="text" 
+					default="Follow Me on" 
+					label="MOD_GOLEMSOCIALBOX_PIN_FOLLOW_BUTTON_TEXT" 
+					description="" />
+				
+				<field name="pin_follow_button_url" 
+					type="text" 
+					default="" 
+					label="MOD_GOLEMSOCIALBOX_PIN_FOLLOW_BUTTON_URL" 
+					description="MOD_GOLEMSOCIALBOX_PIN_FOLLOW_BUTTON_URL_DESC" />
+						
+				
+				<field name="spacer3" type="spacer" hr="true" />
+				
+				
+				<field name="gpbadge_enable" 
+					type="list" 
+					default="yes" 
+					label="MOD_GOLEMSOCIALBOX_GP_BADGE_ENABLE" 
+					description="MOD_GOLEMSOCIALBOX_GP_BADGE_ENABLE_DESC" >
+						<option value="yes">MOD_GOLEMSOCIALBOX_ENABLE</option>
+						<option value="no">MOD_GOLEMSOCIALBOX_DISABLE</option>
+				</field>
+				
+				<field name="gpbadge_version" 
+					type="list" 
+					default="publisher" 
+					label="MOD_GOLEMSOCIALBOX_GP_BADGE_VERSION" 
+					description="MOD_GOLEMSOCIALBOX_GP_BADGE_VERSION_DESC" >
+						<option value="publisher">MOD_GOLEMSOCIALBOX_GP_BADGE_PAGE</option>
+						<option value="author">MOD_GOLEMSOCIALBOX_GP_BADGE_PROFILE</option>
+				</field>
+				
+				<field name="gpbadge_page_id" 
+					type="text" 
+					default="" 
+					label="MOD_GOLEMSOCIALBOX_GP_BADGE_PAGE_ID" 
+					description="MOD_GOLEMSOCIALBOX_GP_BADGE_PAGE_ID_DESC" />
+					
+				<field name="gpbadge_features" 
+					type="list" 
+					default="small" 
+					label="MOD_GOLEMSOCIALBOX_GP_BADGE_FEATURES" 
+					description="MOD_GOLEMSOCIALBOX_GP_BADGE_FEATURES_DESC" >
+						<option value="small">MOD_GOLEMSOCIALBOX_GP_BADGE_FEATURES_SMALL_BADGE</option>
+						<option value="standard">MOD_GOLEMSOCIALBOX_GP_BADGE_FEATURES_STANDARD_BADGE</option>
+				</field>
+				
+				<field name="gpbadge_add_js" 
+					type="list" 
+					default="yes" 
+					label="MOD_GOLEMSOCIALBOX_GP_BADGE_ADD_JS" 
+					description="MOD_GOLEMSOCIALBOX_GP_BADGE_ADD_JS_DESC" >
+						<option value="yes">MOD_GOLEMSOCIALBOX_YES</option>
+						<option value="no">MOD_GOLEMSOCIALBOX_NO</option>
+				</field>
+				
+				
+				<field name="spacer4" type="spacer" hr="true" />
+				
+				
+				<field name="rss_enable" 
+					type="list" 
+					default="yes" 
+					label="MOD_GOLEMSOCIALBOX_RSS_ENABLE" 
+					description="MOD_GOLEMSOCIALBOX_RSS_ENABLE_DESC" >
+						<option value="yes">MOD_GOLEMSOCIALBOX_ENABLE</option>
+						<option value="no">MOD_GOLEMSOCIALBOX_DISABLE</option>
+				</field>
+				
+				<field name="rss_text" 
+					type="text" 
+					default="Subscribe to our" 
+					label="MOD_GOLEMSOCIALBOX_RSS_TEXT" 
+					description="" />
+
+				<field name="rss_url" 
+					type="text" 
+					default="" 
+					label="MOD_GOLEMSOCIALBOX_RSS_URL" 
+					description="" />
+
+				<field name="rss_button_text" 
+					type="text" 
+					default="Feed RSS" 
+					label="MOD_GOLEMSOCIALBOX_RSS_BUTTON_TEXT" 
+					description="" />
+
+			</fieldset>
+		
+		</fields>		
+	</config>
+	
+</extension>

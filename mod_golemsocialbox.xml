@@ -4,11 +4,11 @@
 	<author>Emmanuel Fontan</author>
 	<authorEmail>fontanemmanuel@gmail.com</authorEmail>
 	<authorUrl>www.elgolem.com.ar</authorUrl>
-	<creationDate>07/06/2012</creationDate>
+	<creationDate>11/07/2012</creationDate>
 	<copyright>2012 Emmanuel Fontan</copyright>
 	<license>GNU General Public License v3.0 - http://www.gnu.org/licenses/
 	</license>
-	<version>1.2.1</version>
+	<version>1.3.1</version>
 
 	<description>
 		This module will display a social box that integrates
@@ -154,6 +154,13 @@
 
 				<field name="rss_button_text" type="text" default="Feed RSS"
 					label="MOD_GOLEMSOCIALBOX_RSS_BUTTON_TEXT" description="" />
+
+			</fieldset>
+
+			<fieldset name="advanced">
+
+				<field name="moduleclass_sfx" type="text" default=""
+					label="MOD_GOLEMSOCIALBOX_MODULECLASS_SFX" description="MOD_GOLEMSOCIALBOX_MODULECLASS_SFX_DESC" />
 
 			</fieldset>
 

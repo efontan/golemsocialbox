@@ -1,8 +1,9 @@
 <?php 
+
 /**
  * @package ElGolem
  * @subpackage mod_golemsocialbox
- * @version   1.2.1 - 07/06/2012
+ * @version   1.3.1 - 11/07/2012
  * @author    Emmanuel Fontan
  * @copyright (C) 2012 Emmanuel Fontan (email : fontanemmanel@gmail.com)
  *
@@ -42,6 +43,9 @@ class modGolemSocialBoxHelper {
 		$load_css = $params->get('load_css','yes');
 		$width = ($params->get('width',250) - 10);
 
+		$moduleclass_sfx = $params->get('moduleclass_sfx','');
+
+
 		//Add styles
 		if ($load_css == 'yes') {
 			$document =& JFactory::getDocument();
@@ -50,7 +54,7 @@ class modGolemSocialBoxHelper {
 
 		//Generate the HTML
 		$html = '
-		<div class="golemsocialbox" id="golemsocialbox" style="width:'.$params->get('width',250).'px;">
+		<div class="golemsocialbox'.$moduleclass_sfx.'" id="golemsocialbox" style="width:'.$params->get('width',250).'px;">
 		';
 
 		/*
@@ -62,10 +66,10 @@ class modGolemSocialBoxHelper {
 			//Get FBLike Box Parameters
 			$fblike_url = $params->get('fblike_url','http://www.facebook.com/platform');
 			$fblike_height = (int)$params->get('fblike_height',60);
-				
+
 			$fblike_show_faces = $params->get('fblike_show_faces','true');
-				
-				
+
+
 			$html .= '
 			<div class="golem_fblike_box golem_box" id="golem_fblike_box">
 			<div id="fb-root"></div>
@@ -92,18 +96,18 @@ class modGolemSocialBoxHelper {
 		if ($tw_follow_button_enable == 'yes') {
 			//Get Twitter Parameters
 			$tw_follow_button_user = $params->get('tw_follow_button_user','');
-				
+
 			$tw_follow_button_show_user = (int)$params->get('tw_follow_button_show_user','yes');
 			$show_user = ($tw_follow_button_show_user == 'yes')? '':' data-show-screen-name="false"';
 
 			$tw_follow_button_count = $params->get('tw_follow_button_count','true');
-				
+
 			$html .= '
 			<div class="golem_twitter_follow_button golem_box" id="golem_twitter_follow_button">
-				
+
 			<a href="https://twitter.com/'.$tw_follow_button_user.'" class="twitter-follow-button" data-show-count="'.$tw_follow_button_count.'"'.$show_user.'>Follow</a>
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				
+
 			</div>
 			';
 		}
@@ -117,23 +121,23 @@ class modGolemSocialBoxHelper {
 			//Get Twitter Parameters
 			$pin_follow_button_text = $params->get('pin_follow_button_text','');
 			$pin_follow_button_url = $params->get('pin_follow_button_url','');
-				
+
 			$html .= '
 			<div class="golem_pin_follow_button golem_box" id="golem_pin_follow_button">
-				
+
 			<span class="pinterest_icon">
-				
+
 			'.$pin_follow_button_text.'
 
 			<a href="'.$pin_follow_button_url.'" target="_blank">
 			<img src="modules/mod_golemsocialbox/images/pinterest.png" width="63" height="16" alt="Pinterest" />
 			</a>
-				
+
 			</span>
-				
+
 			</div>
 			';
-				
+
 		}
 
 		/*
@@ -145,17 +149,17 @@ class modGolemSocialBoxHelper {
 			//Get FBLike Box Parameters
 			$gpbadge_version = $params->get('gpbadge_version','');
 			$gpbadge_page_id = $params->get('gpbadge_page_id','');
-				
+
 			$gpbadge_features = $params->get('gpbadge_features','');
-				
+
 			// Height: Small Badge: 69 ; Standar Badge: 131
 			$gpheight = ($gpbadge_features == 'small')? 69:131;
-				
+
 			$gpbadge_add_js = $params->get('gpbadge_add_js','yes');
-				
-				
+
+
 			$html .= '<div class="golem_gp_add_badge golem_box" id="golem_gp_add_badge">';
-				
+
 			if ($gpbadge_add_js == 'yes') {
 				$html .= '<script type="text/javascript">
 				window.___gcfg = {lang: \'en\'};
@@ -182,12 +186,12 @@ class modGolemSocialBoxHelper {
 			$rss_text = $params->get('rss_text','');
 			$rss_url = $params->get('rss_url','');
 			$rss_button_text = $params->get('rss_button_text','Feed RSS');
-				
+
 			$html .= '
 			<div class="golem_rss_feed golem_box" id="golem_rss_feed">
-				
+
 			<span class="rss_icon">
-				
+
 			'.$rss_text.'
 
 			<a href="'.$rss_url.'" title="Feed RSS" target="_blank">
@@ -195,7 +199,7 @@ class modGolemSocialBoxHelper {
 			<img src="modules/mod_golemsocialbox/images/rss.png" alt="Feed RSS" width="16" height="16" />
 			</a>
 
-				
+
 			</span>
 
 			</div>

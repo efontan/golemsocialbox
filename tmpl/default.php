@@ -2,8 +2,8 @@
 
 /**
  * @package ElGolem
- * @subpackage mod_duckduckgo_search
- * @version   1.2.1 - 07/06/2012
+ * @subpackage mod_golemsocialbox
+ * @version   1.3.1 - 11/07/2012
  * @author    Emmanuel Fontan
  * @copyright (C) 2010 Emmanuel Fontan (email : fontanemmanel@gmail.com)
  *

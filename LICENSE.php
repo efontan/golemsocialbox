@@ -1,13 +1,13 @@
 <?php 
-defined('_JEXEC') or die('Restricted access');
 /**
  * @package ElGolem
  * @subpackage mod_golemsocialbox
- * @version   1.2.1 - 07/06/2012
+ * @version   1.3.1 - 11/07/2012
  * @author    Emmanuel Fontan
  * @copyright (C) 2012 Emmanuel Fontan (email : fontanemmanel@gmail.com)
  *
  */
+defined('_JEXEC') or die('Restricted access');
  ?>
 
                     GNU GENERAL PUBLIC LICENSE

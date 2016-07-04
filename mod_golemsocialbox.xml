@@ -2,7 +2,7 @@
 <extension type="module" version="1.7.0" method="upgrade">
 	<name>Golem Social Box Module</name>
 	<author>Emmanuel Fontan</author>
-	<authorEmail>fontanemmanuel@gmail.com</authorEmail>
+	<authorEmail>fontanemmanuel (@) gmail (dot) com</authorEmail>
 	<authorUrl>www.elgolem.com.ar</authorUrl>
 	<creationDate>02/08/2012</creationDate>
 	<copyright>2012 Emmanuel Fontan</copyright>
